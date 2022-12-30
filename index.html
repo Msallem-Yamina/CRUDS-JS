@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud JS</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h2>CRUDS</h2>
+        <p>Product Management System</p>
+    </header>
+    <section class="inputs">
+        <input id="title" type="text" placeholder="title" >
+        <div class="price">
+            <input id="price" type="number" min="0" placeholder="price" required>
+            <input type="number" placeholder="taxes" min="0" max="500" id="taxes">
+            <input type="number" placeholder="ads" min="0" max="500" id="ads">
+            <input type="number" placeholder="discounts" min="0" id="discounts">
+            <small id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count" min="1" max="100" value="1">
+        <input type="text" id="category" placeholder="Category">
+        <button id="submit">Create</button>
+    </section>
+    <section class="outputs">
+        <div class="searchBlock">
+            <input type="text" id="search" placeholder="Search">
+            <div class="btnSearch">
+                <button id="searchTitle" onclick="Search(this.id)">Search By Title</button>
+                <button id="searchCategory" onclick="Search(this.id)">Search By Category</button>
+            </div>
+            <div id="deleteAll">
+            </div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discounts</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+    </section>
+<script src="./script.js"></script>
+</body>
+</html>
